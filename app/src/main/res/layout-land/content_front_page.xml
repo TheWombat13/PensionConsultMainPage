@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.jonathanlarsen.pensionconsultmainpage.FrontPage"
+    tools:showIn="@layout/app_bar_front_page">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Velkommen til Pension Consult!"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.917"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.032"
+        android:id="@+id/textView2" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="159dp"
+        android:layout_height="191dp"
+        app:srcCompat="@drawable/portraet"
+        android:layout_marginLeft="-35dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="7dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:inputType="textMultiLine"
+        android:layout_width="201dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:lineSpacingExtra="8sp"
+        android:text="Uvildig pensionsrådgivning er mere vigtig end nogensinde før. Pensionsordningerne bliver stadig mere og mere komplicerede i takt med, at pensionsselskaberne øger antallet af mulige forsikringsdækninger og opsparingsformer. Samtidig er kampen om kunderne blevet større end nogensinde før.
+
+Derfor er det vigtigt at finde en pensionsrådgiver, som har de fornødne kompetencer, og som giver troværdige råd. Det er i den forbindelse væsentligt, at vi som jeres forsikringsmægler repræsenterer jer og jeres medarbejdere og ikke pensionsselskabet. Det er heri, at vores uvildighed ligger.
+
+Med mere end 25 års erfaring i pensionsbranchen, heraf 20 års erfaring fra mæglerbranchen, tilbyder vi uvildig pensionsrådgivning til firmaer og deres ansatte samt privatpersoner på enten honorarbasis eller som led i et samlet koncept.
+
+Det er helt afgørende for os, at vi tilbyder et højt fagligt niveau og samtidig kan formidle kompliceret – og for mange kedeligt – stof på en levende og let tilgængelig måde.
+
+Vi lægger samtidig stor vægt på den personlige relation."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintLeft_toLeftOf="@+id/imageView2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="167dp" />
+
+</android.support.constraint.ConstraintLayout>
