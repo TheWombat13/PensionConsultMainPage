@@ -72,10 +72,14 @@ public class FrontPage extends AppCompatActivity
         } else if (id == R.id.nav_guide) {
 
         } else if (id == R.id.nav_info) {
+            Intent i= new Intent(this, InfoActivity.class);
+            startActivity(i);
 
         } else if (id == R.id.nav_settings) {
 
         } else if (id == R.id.nav_contact) {
+            Intent i= new Intent(this, Contact.class);
+            startActivity(i);
 
         } else if (id == R.id.nav_send) {
 
@@ -89,7 +93,8 @@ public class FrontPage extends AppCompatActivity
     @Override
     public void onClick(View v) {
         if (v == Test) {
-
+            Intent i= new Intent(this, spg1.class);
+            startActivity(i);
         }
 
     }
