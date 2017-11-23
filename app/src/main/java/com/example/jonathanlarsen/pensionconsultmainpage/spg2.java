@@ -28,7 +28,7 @@ public class spg2 extends AppCompatActivity implements View.OnClickListener {
         annuller = (Button) findViewById(R.id.anullBut);
 
         svar1.setOnClickListener(this);
-        svar2.setOnClickListener(this) ;
+        svar2.setOnClickListener(this);
         svar3.setOnClickListener(this);
        // svar4.setOnClickListener(this);
         tilbage.setOnClickListener(this);
