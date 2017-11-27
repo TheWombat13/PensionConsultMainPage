@@ -35,7 +35,7 @@
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/ic_dialog_email"
+        app:srcCompat="@drawable/ic_question_mark"
         android:layout_marginRight="@dimen/fab_margin" />
 
 </android.support.constraint.ConstraintLayout>

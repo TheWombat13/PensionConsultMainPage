@@ -46,6 +46,7 @@ public class exampleAdapter extends ArrayAdapter<Example> implements ValueEventL
     public void onDataChange(DataSnapshot dataSnapshot) {
         this.clear();
         for (DataSnapshot child : dataSnapshot.getChildren()) {
+
             this.add(child.getValue(Example.class));
         }
     }

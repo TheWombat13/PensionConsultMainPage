@@ -4,7 +4,7 @@
     android:id="@+id/title_view"
     android:layout_width="match_parent"
     android:text="title"
-    android:textSize="24dp"
+    android:textSize="18dp"
     android:textStyle="italic"
     android:padding="16dp"
     android:layout_height="wrap_content"
