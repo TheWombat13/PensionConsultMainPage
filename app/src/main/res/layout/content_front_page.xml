@@ -1,102 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.jonathanlarsen.pensionconsultmainpage.FrontPage"
-    tools:showIn="@layout/app_bar_front_page">
+    android:fillViewport="true">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="Velkommen til Pension Consult!"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.828"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.032" />
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="1">
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="159dp"
-        android:layout_height="191dp"
-        app:srcCompat="@drawable/portraet"
-        android:layout_marginLeft="-35dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="7dp"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
-        app:layout_constraintVertical_bias="0.026" />
+        <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:context="com.example.jonathanlarsen.pensionconsultmainpage.FrontPage"
+            tools:layout_editor_absoluteY="81dp"
+            tools:showIn="@layout/app_bar_front_page">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="201dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="8dp"
-        android:inputType="textMultiLine"
-        android:text="Uvildig pensionsrådgivning er mere vigtig end nogensinde før. Pensionsordningerne bliver stadig mere og mere komplicerede i takt med, at pensionsselskaberne øger antallet af mulige forsikringsdækninger og opsparingsformer. Samtidig er kampen om kunderne blevet større end nogensinde før.
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="279dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/test"
+
+                android:layout_width="270dp"
+                android:layout_height="60dp"
+
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/buttonshape"
+                android:shadowColor="#A8A8A8"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="0"
+                android:text="Tag Test"
+                android:textColor="#1382da"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/readmore"
+                app:layout_constraintVertical_bias="0.225" />
+
+            <Button
+                android:id="@+id/readmore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text=" VIS MERE"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.028"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/infotext" />
+
+            <TextView
+                android:id="@+id/infotext"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:maxLines="3"
+                android:text="Velkommen til Pension Consult Forsikringsmægler!
+
+Uvildig pensionsrådgivning er mere vigtig end nogensinde før. Pensionsordningerne bliver stadig mere og mere komplicerede i takt med, at pensionsselskaberne øger antallet af mulige forsikringsdækninger og opsparingsformer. Samtidig er kampen om kunderne blevet større end nogensinde før.
+
+Derfor er det vigtigt at finde en pensionsrådgiver, som har de fornødne kompetencer, og som giver troværdige råd. Det er i den forbindelse væsentligt, at vi som jeres forsikringsmægler repræsenterer jer og jeres medarbejdere og ikke pensionsselskabet. Det er heri, at vores uvildighed ligger.
+
+Med mere end 25 års erfaring i pensionsbranchen, heraf 20 års erfaring fra mæglerbranchen, tilbyder vi uvildig pensionsrådgivning til firmaer og deres ansatte samt privatpersoner på enten honorarbasis eller som led i et samlet koncept.
+
+Det er helt afgørende for os, at vi tilbyder et højt fagligt niveau og samtidig kan formidle kompliceret – og for mange kedeligt – stof på en levende og let tilgængelig måde.
+
+Vi lægger samtidig stor vægt på den personlige relation.
+
+Vi er specialister i de særlige problemstillinger, der gælder for grænsegængere mellem Danmark og Sverige.
+
+Tag meget gerne kontakt til mig, hvis du har spørgsmål, eller du gerne vil høre mere på et uforpligtigende møde.
 
 "
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.0" />
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.19"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="342dp"
-        android:layout_height="62dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="0dp"
-        android:inputType="textMultiLine"
-        android:text="Herunder er der mulighed for at få oplyst sin risikovillighed ved en hurtig og simpel test"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.145" />
+        </android.support.constraint.ConstraintLayout>
 
-    <Button
-        android:id="@+id/test"
 
-        android:text="Tag Test"
-        android:textColor="#1382da"
-        android:textSize="30sp"
+    </TableLayout>
+</ScrollView>
 
-        android:layout_width="270dp"
-        android:layout_height="60dp"
-        android:background="@drawable/buttonshape"
-        android:shadowColor="#A8A8A8"
-        android:shadowDx="0"
-        android:shadowDy="0"
-        android:shadowRadius="0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintVertical_bias="0.0" />
-
-</android.support.constraint.ConstraintLayout>

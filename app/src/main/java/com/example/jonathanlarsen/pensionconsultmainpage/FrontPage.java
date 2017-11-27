@@ -14,11 +14,15 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 public class FrontPage extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
-    Button Test;
+    Button Test, showtext;
+    ImageView frontpageimg;
+    TextView text;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +30,14 @@ public class FrontPage extends AppCompatActivity
         setContentView(R.layout.activity_front_page);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        frontpageimg = (ImageView)findViewById(R.id.imageView);
+        frontpageimg.setBackgroundResource(R.drawable.frontpageanim);
+
+        text = (TextView)findViewById(R.id.infotext);
+        showtext = (Button)findViewById(R.id.readmore);
+        showtext.setOnClickListener(this);
+
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -96,6 +108,17 @@ public class FrontPage extends AppCompatActivity
             Intent i= new Intent(this, spg1.class);
             startActivity(i);
         }
-
+        if (v == showtext)
+        {
+            if (showtext.getText().toString().equalsIgnoreCase("VIS MERE"))
+            {
+                text.setMaxLines(Integer.MAX_VALUE);//your TextView
+                showtext.setText("SE MINDRE");
+            }
+            else {
+                text.setMaxLines(3);//your TextView
+                showtext.setText("VIS MERE");
+            }
+        }
     }
 }
