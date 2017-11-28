@@ -1,9 +1,11 @@
 package com.example.jonathanlarsen.pensionconsultmainpage;
 
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.text.Html;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -22,7 +24,8 @@ public class FrontPage extends AppCompatActivity
 
     Button Test, showtext;
     ImageView frontpageimg;
-    TextView text;
+    TextView text, testtxt;
+    AnimationDrawable frameAnimation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,13 +35,18 @@ public class FrontPage extends AppCompatActivity
         setSupportActionBar(toolbar);
 
         frontpageimg = (ImageView)findViewById(R.id.imageView);
-        frontpageimg.setBackgroundResource(R.drawable.frontpageanim);
+        frontpageimg.setImageDrawable(getResources().getDrawable( R.drawable.frontpageanim));
+
+        testtxt = (TextView)findViewById(R.id.testinfo);
+        testtxt.setText(Html.fromHtml(getString(R.string.Testinfo)));
 
         text = (TextView)findViewById(R.id.infotext);
+        text.setText(Html.fromHtml(getString(R.string.Introtext)));
+
         showtext = (Button)findViewById(R.id.readmore);
         showtext.setOnClickListener(this);
 
-
+        frameAnimation = (AnimationDrawable) frontpageimg.getDrawable(); frameAnimation.start();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -116,7 +124,7 @@ public class FrontPage extends AppCompatActivity
                 showtext.setText("SE MINDRE");
             }
             else {
-                text.setMaxLines(3);//your TextView
+                text.setMaxLines(5);//your TextView
                 showtext.setText("VIS MERE");
             }
         }

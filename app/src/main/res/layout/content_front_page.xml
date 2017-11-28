@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true">
@@ -23,7 +24,10 @@
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="match_parent"
-                android:layout_height="279dp"
+                android:layout_height="239dp"
+                android:layout_marginTop="4dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintLeft_toLeftOf="parent"
@@ -52,8 +56,8 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/readmore"
-                app:layout_constraintVertical_bias="0.225" />
+                app:layout_constraintTop_toBottomOf="@+id/testinfo"
+                app:layout_constraintVertical_bias="0.0" />
 
             <Button
                 android:id="@+id/readmore"
@@ -65,41 +69,33 @@
                 android:layout_marginTop="8dp"
                 android:text=" VIS MERE"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.028"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/infotext" />
 
             <TextView
                 android:id="@+id/infotext"
-                android:layout_width="300dp"
+                android:layout_width="348dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:maxLines="3"
-                android:text="Velkommen til Pension Consult Forsikringsmægler!
-
-Uvildig pensionsrådgivning er mere vigtig end nogensinde før. Pensionsordningerne bliver stadig mere og mere komplicerede i takt med, at pensionsselskaberne øger antallet af mulige forsikringsdækninger og opsparingsformer. Samtidig er kampen om kunderne blevet større end nogensinde før.
-
-Derfor er det vigtigt at finde en pensionsrådgiver, som har de fornødne kompetencer, og som giver troværdige råd. Det er i den forbindelse væsentligt, at vi som jeres forsikringsmægler repræsenterer jer og jeres medarbejdere og ikke pensionsselskabet. Det er heri, at vores uvildighed ligger.
-
-Med mere end 25 års erfaring i pensionsbranchen, heraf 20 års erfaring fra mæglerbranchen, tilbyder vi uvildig pensionsrådgivning til firmaer og deres ansatte samt privatpersoner på enten honorarbasis eller som led i et samlet koncept.
-
-Det er helt afgørende for os, at vi tilbyder et højt fagligt niveau og samtidig kan formidle kompliceret – og for mange kedeligt – stof på en levende og let tilgængelig måde.
-
-Vi lægger samtidig stor vægt på den personlige relation.
-
-Vi er specialister i de særlige problemstillinger, der gælder for grænsegængere mellem Danmark og Sverige.
-
-Tag meget gerne kontakt til mig, hvis du har spørgsmål, eller du gerne vil høre mere på et uforpligtigende møde.
-
-"
-                android:textStyle="bold"
+                android:maxLines="5"
+                android:text="@string/Introtext"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.19"
+                app:layout_constraintHorizontal_bias="0.222"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+            <TextView
+                android:id="@+id/testinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:layout_constraintHorizontal_bias="0.501"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/readmore" />
 
         </android.support.constraint.ConstraintLayout>
 
