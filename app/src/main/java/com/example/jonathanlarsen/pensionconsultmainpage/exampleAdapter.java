@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -17,12 +16,11 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class exampleAdapter extends ArrayAdapter<Example> implements ValueEventListener {
 
     public exampleAdapter(@NonNull Context context) {
-        super(context, -1,  new ArrayList<Example>());
+        super(context, -1, new ArrayList<Example>());
 
         DatabaseReference articleRef = FirebaseDatabase.getInstance().getReference("example");
         articleRef.addValueEventListener(this);
@@ -36,7 +34,7 @@ public class exampleAdapter extends ArrayAdapter<Example> implements ValueEventL
         View rowView = layoutInflater.inflate(R.layout.example_item_view, parent, false);
 
         TextView article = rowView.findViewById(R.id.title_view);
-
+        String url = example.url;
         article.setText(example.title);
 
         return rowView;
@@ -46,7 +44,6 @@ public class exampleAdapter extends ArrayAdapter<Example> implements ValueEventL
     public void onDataChange(DataSnapshot dataSnapshot) {
         this.clear();
         for (DataSnapshot child : dataSnapshot.getChildren()) {
-
             this.add(child.getValue(Example.class));
         }
     }
@@ -55,6 +52,5 @@ public class exampleAdapter extends ArrayAdapter<Example> implements ValueEventL
     public void onCancelled(DatabaseError databaseError) {
         System.out.println("Failed to retrieve Database data!");
         System.out.println(databaseError.getMessage());
-        System.out.println(databaseError.getDetails());
     }
 }
