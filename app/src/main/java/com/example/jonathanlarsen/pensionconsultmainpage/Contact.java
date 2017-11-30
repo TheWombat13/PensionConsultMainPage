@@ -1,9 +1,12 @@
 package com.example.jonathanlarsen.pensionconsultmainpage;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -40,7 +43,60 @@ public class Contact extends Activity implements View.OnClickListener {
 
     public void onClick (View view) {
         if (view == sendButton) {
-            sendMessage(view);
+
+            setVariables();
+            if (!name.equals("")) {
+                if (!mail.equals("")) {
+                    //tjek mail
+                    try {
+                        String [] mailPart = mail.split("@");
+                        if (mailPart[1].equalsIgnoreCase("hotmail.com") || mailPart[1].equalsIgnoreCase("gmail.com") ||
+                                mailPart[1].equalsIgnoreCase("live.dk") || mailPart[1].equalsIgnoreCase("yahoo.com")) {
+
+                            sendMessage(view);
+                        }
+                    } catch (Exception e) {
+                        AlertDialog dialog = new AlertDialog.Builder(view.getContext())
+                                .create();
+                        dialog.setCancelable(false);
+                        dialog.setTitle("Invalid Mail!" + name);
+                        dialog.setMessage("You entered a false e-mail! \nPlease enter your e-mail");
+                        dialog.setButton(view.getContext().getString(R.string.Ok_text), new DialogInterface.OnClickListener() {
+
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        });
+                        dialog.show();
+                    }
+                } else {
+                    AlertDialog dialog = new AlertDialog.Builder(view.getContext())
+                            .create();
+                    dialog.setCancelable(false);
+                    dialog.setTitle("Missing Mail!");
+                    dialog.setMessage("You didn't enter a mail");
+                    dialog.setButton(view.getContext().getString(R.string.Ok_text), new DialogInterface.OnClickListener() {
+
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    });
+                    dialog.show();
+                }
+            } else {
+                AlertDialog dialog = new AlertDialog.Builder(view.getContext())
+                        .create();
+                dialog.setCancelable(false);
+                dialog.setTitle("Missing Name!");
+                dialog.setMessage("You didn't enter a name");
+                dialog.setButton(view.getContext().getString(R.string.Ok_text), new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+                dialog.show();
+            }
         }
     }
 
@@ -59,7 +115,7 @@ public class Contact extends Activity implements View.OnClickListener {
         return true;
     }
 
-    public void sendMessage(View view) {
+    public void setVariables () {
         // Get variables from editable text
         // Name
         EditText etName = (EditText) findViewById(R.id.etName);
@@ -72,9 +128,9 @@ public class Contact extends Activity implements View.OnClickListener {
         // Comment
         EditText etComment = (EditText) findViewById(R.id.etComment);
         comment = etComment.getText().toString();
+    }
 
-        validation();
-
+    public void sendMessage(View view) {
         /* Create the Intent */
         final Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
 
@@ -86,22 +142,6 @@ public class Contact extends Activity implements View.OnClickListener {
 
         /* Send it off to the Activity-Chooser */
         startActivity(Intent.createChooser(emailIntent, "Send mail..."));
-
-
-    }
-
-    public Boolean validation () {
-        // Validate name
-        if(isAlpha(name)) {
-            // Validate subject
-            if(subject != null) {
-                return true;
-            }else {
-                return false;
-            }
-        }else {
-            return false;
-        }
     }
 
     @Override
