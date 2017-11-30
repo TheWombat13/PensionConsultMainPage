@@ -84,6 +84,8 @@ public class FrontPage extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_news) {
+
+
             Intent i= new Intent(this, NewsActivity.class);
             startActivity(i);
         } else if (id == R.id.nav_guide) {
@@ -98,10 +100,7 @@ public class FrontPage extends AppCompatActivity
             Intent i= new Intent(this, Contact.class);
             startActivity(i);
 
-        } else if (id == R.id.nav_send) {
-
         }
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;

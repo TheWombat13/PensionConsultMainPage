@@ -17,7 +17,7 @@
         <item
             android:id="@+id/nav_settings"
             android:icon="@drawable/ic_settings_black_24dp"
-            android:title="Instillinger" />
+            android:title="Indstillinger" />
     </group>
 
     <item android:title="Kontakt">
@@ -26,10 +26,7 @@
                 android:id="@+id/nav_contact"
                 android:icon="@drawable/ic_contact"
                 android:title="Kontaktinformation" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
+
         </menu>
     </item>
 
