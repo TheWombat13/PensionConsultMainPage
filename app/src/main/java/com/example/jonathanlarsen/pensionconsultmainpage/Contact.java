@@ -16,7 +16,7 @@ public class Contact extends Activity implements View.OnClickListener {
 
     private Button sendButton;
 
-    private String name, subject, comment;
+    private String name, mail, subject, comment;
 
     // Initiate spinner variables
     Spinner mySpinner;
@@ -29,7 +29,6 @@ public class Contact extends Activity implements View.OnClickListener {
 
         sendButton = (Button) findViewById(R.id.button2);
 
-        // Spinner
         mySpinner = (Spinner) findViewById(R.id.spinner);
         myAdapter = new ArrayAdapter<String>(Contact.this, android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.contact_subjects));
         myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -65,11 +64,12 @@ public class Contact extends Activity implements View.OnClickListener {
         // Name
         EditText etName = (EditText) findViewById(R.id.etName);
         name = etName.getText().toString();
-        // Subject
+        // Sender email
         EditText etSubject = (EditText) findViewById(R.id.etMail);
-        subject = etSubject.getText().toString();
+        mail = etSubject.getText().toString();
         // Spinner
-        String test = mySpinner.getSelectedItem().toString();
+        subject = mySpinner.getSelectedItem().toString();
+        // Comment
         EditText etComment = (EditText) findViewById(R.id.etComment);
         comment = etComment.getText().toString();
 
@@ -82,7 +82,7 @@ public class Contact extends Activity implements View.OnClickListener {
         emailIntent.setType("plain/text");
         emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{"jakobsen1608@hotmail.com"});
         emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject:" + subject);
-        emailIntent.putExtra(android.content.Intent.EXTRA_TEXT, "Comment: " + comment + "From: " + name);
+        emailIntent.putExtra(android.content.Intent.EXTRA_TEXT, "Comment: " + comment + "From: " + name + " Mail: " + mail);
 
         /* Send it off to the Activity-Chooser */
         startActivity(Intent.createChooser(emailIntent, "Send mail..."));
@@ -105,7 +105,6 @@ public class Contact extends Activity implements View.OnClickListener {
     }
 
     @Override
-    public void onPointerCaptureChanged(boolean hasCapture) {
-        //ToDo Skal vel indeholde spinner logic?
-    }
+    public void onPointerCaptureChanged(boolean hasCapture) {    }
 }
+
