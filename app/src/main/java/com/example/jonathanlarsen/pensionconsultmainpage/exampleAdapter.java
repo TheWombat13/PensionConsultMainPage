@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -33,9 +34,14 @@ public class exampleAdapter extends ArrayAdapter<Example> implements ValueEventL
         LayoutInflater layoutInflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View rowView = layoutInflater.inflate(R.layout.example_item_view, parent, false);
 
-        TextView article = rowView.findViewById(R.id.title_view);
+        TextView articleTitle = rowView.findViewById(R.id.textViewTitle);
+        TextView articleDate = rowView.findViewById(R.id.textViewDate);
+        ImageView articlePicture = rowView.findViewById(R.id.imageViewPic);
+
         String url = example.url;
-        article.setText(example.title);
+        articleTitle.setText(example.title);
+        articleDate.setText(example.date);
+
 
         return rowView;
     }
