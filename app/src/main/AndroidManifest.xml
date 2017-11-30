@@ -30,11 +30,8 @@
             android:theme="@style/AppTheme.NoActionBar"></activity>
 
         <activity android:name=".Contact"/>
-        <activity android:name=".resultat"/>
-        <activity android:name=".spg1"/>
-        <activity android:name=".spg2"/>
-        <activity android:name=".spg3"/>
-        <activity android:name=".spg4"/>
+        <activity android:name=".TestResult"/>
+        <activity android:name=".TestQuestions"/>
     </application>
 
 </manifest>

@@ -18,7 +18,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
-
 public class FrontPage extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
@@ -34,16 +33,17 @@ public class FrontPage extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        frontpageimg = (ImageView)findViewById(R.id.imageView);
-        frontpageimg.setImageDrawable(getResources().getDrawable( R.drawable.frontpageanim));
+        frontpageimg = (ImageView) findViewById(R.id.imageView);
+        frontpageimg.setImageDrawable(getResources().getDrawable(R.drawable.frontpageanim));
 
-        text = (TextView)findViewById(R.id.infotext);
+        text = (TextView) findViewById(R.id.infotext);
         text.setText(Html.fromHtml(getString(R.string.Introtext)));
 
-        showtext = (Button)findViewById(R.id.readmore);
+        showtext = (Button) findViewById(R.id.readmore);
         showtext.setOnClickListener(this);
 
-        frameAnimation = (AnimationDrawable) frontpageimg.getDrawable(); frameAnimation.start();
+        frameAnimation = (AnimationDrawable) frontpageimg.getDrawable();
+        frameAnimation.start();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -54,7 +54,7 @@ public class FrontPage extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        Test = (Button)findViewById(R.id.test);
+        Test = (Button) findViewById(R.id.test);
 
         Test.setOnClickListener(this);
     }
@@ -86,21 +86,21 @@ public class FrontPage extends AppCompatActivity
         if (id == R.id.nav_news) {
 
 
-            Intent i= new Intent(this, NewsActivity.class);
+            Intent i = new Intent(this, NewsActivity.class);
             startActivity(i);
         } else if (id == R.id.nav_guide) {
 
         } else if (id == R.id.nav_info) {
-            Intent i= new Intent(this, InfoActivity.class);
+            Intent i = new Intent(this, InfoActivity.class);
             startActivity(i);
 
         } else if (id == R.id.nav_settings) {
 
         } else if (id == R.id.nav_contact) {
-            Intent i= new Intent(this, Contact.class);
+            Intent i = new Intent(this, Contact.class);
             startActivity(i);
-
         }
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
@@ -109,17 +109,14 @@ public class FrontPage extends AppCompatActivity
     @Override
     public void onClick(View v) {
         if (v == Test) {
-            Intent i= new Intent(this, spg1.class);
+            Intent i = new Intent(this, TestQuestions.class);
             startActivity(i);
         }
-        if (v == showtext)
-        {
-            if (showtext.getText().toString().equalsIgnoreCase("VIS MERE"))
-            {
+        if (v == showtext) {
+            if (showtext.getText().toString().equalsIgnoreCase("VIS MERE")) {
                 text.setMaxLines(Integer.MAX_VALUE);//your TextView
                 showtext.setText("SE MINDRE");
-            }
-            else {
+            } else {
                 text.setMaxLines(5);//your TextView
                 showtext.setText("VIS MERE");
             }

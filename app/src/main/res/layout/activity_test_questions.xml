@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.jonathanlarsen.pensionconsultmainpage.spg1">
+    tools:context="com.example.jonathanlarsen.pensionconsultmainpage.TestQuestions">
 
         <Button
             android:id="@+id/backBut"
@@ -69,42 +69,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             tools:layout_editor_absoluteX="30dp">
-
-            <RadioButton
-                android:id="@+id/radioButton"
-                android:layout_width="match_parent"
-                android:layout_height="41dp"
-                android:layout_weight="1"
-                android:text="RadioButton"
-                tools:layout_editor_absoluteX="93dp"
-                tools:layout_editor_absoluteY="151dp" />
-
-            <RadioButton
-                android:id="@+id/radioButton3"
-                android:layout_width="match_parent"
-                android:layout_height="41dp"
-                android:layout_weight="1"
-                android:text="RadioButton"
-                tools:layout_editor_absoluteX="93dp"
-                tools:layout_editor_absoluteY="249dp" />
-
-            <RadioButton
-                android:id="@+id/radioButton4"
-                android:layout_width="match_parent"
-                android:layout_height="41dp"
-                android:layout_weight="1"
-                android:text="RadioButton"
-                tools:layout_editor_absoluteX="93dp"
-                tools:layout_editor_absoluteY="298dp" />
-
-            <RadioButton
-                android:id="@+id/radioButton2"
-                android:layout_width="match_parent"
-                android:layout_height="41dp"
-                android:layout_weight="1"
-                android:text="RadioButton"
-                tools:layout_editor_absoluteX="93dp"
-                tools:layout_editor_absoluteY="200dp" />
 
         </RadioGroup>
 

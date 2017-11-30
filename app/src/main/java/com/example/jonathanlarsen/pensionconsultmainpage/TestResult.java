@@ -6,13 +6,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class resultat extends AppCompatActivity implements View.OnClickListener {
+public class TestResult extends AppCompatActivity implements View.OnClickListener {
     Button testIgen, afslut;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_resultat);
+        setContentView(R.layout.activity_test_result);
 
         testIgen = (Button) findViewById(R.id.againButt);
         afslut = (Button) findViewById(R.id.endButt);
@@ -25,7 +25,7 @@ public class resultat extends AppCompatActivity implements View.OnClickListener 
     @Override
     public void onClick(View view) {
         if (view==testIgen) {
-            Intent i = new Intent(this, spg1.class);
+            Intent i = new Intent(this, TestQuestions.class);
             startActivity(i);
         }
 
