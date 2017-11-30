@@ -33,11 +33,6 @@
         ]]>
         </string>
 
-    <string name="Testinfo">
-        <![CDATA[
-        <big> <b> Tag en uforpligtende test for <br> at se din risikovillighed </b> </big>
-        ]]>
-    </string>
 
     <string-array name="contact_subjects">
         <item>Uvildig Rådgivning</item>

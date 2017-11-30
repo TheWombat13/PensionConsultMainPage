@@ -24,7 +24,7 @@ public class FrontPage extends AppCompatActivity
 
     Button Test, showtext;
     ImageView frontpageimg;
-    TextView text, testtxt;
+    TextView text;
     AnimationDrawable frameAnimation;
 
     @Override
@@ -37,8 +37,6 @@ public class FrontPage extends AppCompatActivity
         frontpageimg = (ImageView)findViewById(R.id.imageView);
         frontpageimg.setImageDrawable(getResources().getDrawable( R.drawable.frontpageanim));
 
-        testtxt = (TextView)findViewById(R.id.testinfo);
-        testtxt.setText(Html.fromHtml(getString(R.string.Testinfo)));
 
         text = (TextView)findViewById(R.id.infotext);
         text.setText(Html.fromHtml(getString(R.string.Introtext)));
