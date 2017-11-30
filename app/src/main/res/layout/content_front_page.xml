@@ -37,10 +37,8 @@
 
             <Button
                 android:id="@+id/test"
-
                 android:layout_width="270dp"
                 android:layout_height="60dp"
-
                 android:layout_marginTop="8dp"
                 android:background="@drawable/buttonshape"
                 android:shadowColor="#A8A8A8"
@@ -55,8 +53,7 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/testinfo"
-                app:layout_constraintVertical_bias="0.733" />
+                app:layout_constraintTop_toBottomOf="@+id/testinfo"/>
 
             <Button
                 android:id="@+id/readmore"
