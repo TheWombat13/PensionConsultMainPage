@@ -36,11 +36,13 @@ public class exampleAdapter extends ArrayAdapter<Example> implements ValueEventL
 
         TextView articleTitle = rowView.findViewById(R.id.textViewTitle);
         TextView articleDate = rowView.findViewById(R.id.textViewDate);
+        TextView articleDescription = rowView.findViewById(R.id.textViewDescription);
         ImageView articlePicture = rowView.findViewById(R.id.imageViewPic);
 
         String url = example.url;
         articleTitle.setText(example.title);
         articleDate.setText(example.date);
+        articleDescription.setText(example.desc);
 
 
         return rowView;

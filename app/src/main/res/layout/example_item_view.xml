@@ -9,26 +9,38 @@
         android:id="@+id/imageViewPic"
         android:layout_width="64dp"
         android:layout_height="64dp"
-        android:src="@drawable/pc_logo"/>
+        android:src="@drawable/pc_logo" />
 
     <TextView
         android:id="@+id/textViewTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/imageViewPic"
+        android:padding="3dp"
         android:text="title"
         android:textSize="16dp"
-        android:padding="10dp"
         android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textViewDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textViewTitle"
-        android:text="date"
-        android:textSize="12dp"
+        android:layout_below="@+id/textViewDescription"
         android:gravity="right"
-        android:textStyle="italic"/>
+        android:text="date"
+        android:textSize="8dp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/textViewDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewTitle"
+        android:layout_toRightOf="@id/imageViewPic"
+        android:gravity="left"
+        android:padding="3dp"
+        android:text="description"
+        android:textSize="12dp"
+        android:textStyle="normal" />
 
 </RelativeLayout>
